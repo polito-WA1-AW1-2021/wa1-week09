@@ -33,7 +33,7 @@ exports.getCourse = (code) => {
         return;
       }
       if (row == undefined) {
-        resolve({error: 'Course not found.'});
+        reject({error: 'Course not found.'});
       } else {
         const course = { code: row.code, name: row.name, CFU: row.CFU };
         resolve(course);

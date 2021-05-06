@@ -5,19 +5,54 @@ The `react-score-server` is the server-side app companion of [`react-scores`](ht
 ## APIs
 Hereafter, we report the designed HTTP APIs, also implemented in the project.
 
-### __Action__
+### List Courses
 
-URL: `/`
+URL: `/api/courses`
 
-HTTP Method: 
+HTTP Method: GET
 
-Description: 
+Description: Retrieve the list of all the course
 
-Request body: 
+Request body: EMPTY
 
-Response:
+Response: 
 
 Response body:
 ```
-{}
+[ {code, name, CFU}, {code, name, CFU} ]
 ```
+
+### Get a Course
+
+URL: `/api/courses/:code`
+
+HTTP Method: GET
+
+Description: Retrieve the attributes of the course with the specified code
+
+Request body: EMPTY
+
+Response: 
+
+Response body:
+```
+{code, name, CFU}, {code, name, CFU}
+```
+
+### List Exams
+
+### Get an Exams
+
+### Add a new exam
+
+URL: `/api/exams`
+
+HTTP Method: POST
+
+Description: 
+
+Request body: `{ code, score, date }`
+
+Response: EMPTY
+
+Response body:
